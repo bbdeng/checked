@@ -33,7 +33,7 @@
 		//3.#checkedRevBtn
 		var checkedRevBtn=document.getElementById("checkedRevBtn");
 		checkedRevBtn.onclick=function(){
-			
+			checkedAllBox.checked=true;
 			for (var i=0;i<items.length;i++){
 				/*if(items[i].checked==true){
 					items[i].checked=false;
@@ -42,6 +42,11 @@
 				};*/
 				//更简单的写法
 				items[i].checked = !items[i].checked;
+				if(!items[i].checked){
+						checkedAllBox.checked=false;
+						
+					}
+				
 			};
 		};
 		
